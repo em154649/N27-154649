@@ -10,3 +10,7 @@
     * Aufzählung mit Eindrücken (* Aufzäahlung...)
     * eien Issue für die Erstellung einer HTML-Seite erstellt
     
+    ## 16.11.2021 
+    * Absätze in HTMl erstellen <p>...</p>
+    * Titel in Html einbauen
+    * Html- Grundgerust in VSC erstellen "hmtl:5"
