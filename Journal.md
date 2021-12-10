@@ -24,3 +24,10 @@
 * Der Inhalt wird mit ```localhost:3000``` aufgerufen 
 * Der ```localhost:3000``` ist der eigene Rechner.
 * Mit ```ipconfig``` wird die Ip-Adresse angezeigt 
+
+## 03.12.2021
+* Schriftart ändern mit CSS
+* HMTL-Grundgerüst erstellen 
+* Button erstellen 
+* Style einfugen über styles.css-Datei
+* Geschweifte Klammer mit ALTGr+7 erstellen 
