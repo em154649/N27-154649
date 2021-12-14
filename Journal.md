@@ -31,3 +31,13 @@
 * Button erstellen 
 * Style einfugen über styles.css-Datei
 * Geschweifte Klammer mit ALTGr+7 erstellen 
+
+## 07.12.2021
+* Html
+* verschiedene Element in Html recherieren und einbauen 
+* verschiedene Elemete in Html stylen
+
+## 14.12.2021
+* Bild einfügen 
+* Unterschied zwischen PNG und JPG/JPEG verstehen 
+* Alt- Tag beim Bild verstehen 
