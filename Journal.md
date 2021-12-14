@@ -41,3 +41,5 @@
 * Bild einfügen 
 * Unterschied zwischen PNG und JPG/JPEG verstehen 
 * Alt- Tag beim Bild verstehen 
+* Hyperlink einbauen <a href...></a>
+* Target beim Hyperlink verstehen 
