@@ -1,3 +1,3 @@
-# N27-154649
+# N27
+Entwicklung einer Banking-App nach dem Vorbild der N26-Bank
 
-Entwicklung einer Onlinebank nach dem Vorbild der N26-Bank.

@@ -4,7 +4,6 @@
   "description": "Meine tolle Smartphone-BANK",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "cookie": "^0.4.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.7.4",
@@ -13,7 +12,7 @@
     "iban": "0.0.12",
     "mysql": "^2.18.1",
     "node-ts-open-weather-map": "^1.2.1",
-    "nodemon": "^1.19.4",
+    "nodemon": "^1.19.2",
     "weather-js": "^2.0.0"
   },
   "devDependencies": {},

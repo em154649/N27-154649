@@ -1,14 +1,15 @@
 body {
-    font-family: Arial, Helvetica, sans-serif; 
-    color: rgb(23, 10, 95);
-    background-image: url("Hintergrund.jpg");
+    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+    color: rgb(97, 23, 218);    
+    background-image: url('hintergrundbild.jpg');
 }
 
 div {
-    background-color: blue;
- }
+    font-size:xx-small;
+    background-color: powderblue;
+}
 
-ul{ 
-    list-style: square inside url("Icon.gif");
+ul {
+    list-style: square inside url("icon.png");
 }

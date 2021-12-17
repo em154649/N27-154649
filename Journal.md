@@ -19,27 +19,40 @@
 * Überschrift in HTML erstellen: <h1>...</h1>
 * Absätze in HTML erstellen: <p>...</p>
 
+## 26.11.2021
+
 ## 30.11.2021
-* am Anfang der Stunde wird derveigene Webserver im Terminal gestartet.
-* Der Inhalt wird mit ```localhost:3000``` aufgerufen 
-* Der ```localhost:3000``` ist der eigene Rechner.
-* Mit ```ipconfig``` wird die Ip-Adresse angezeigt 
+ * Am Anfang der Stunde wird der eigene Webserver im Terminal gestartet. Der Befehl wird mit der Pfeiltaste "Nach oben" angezeigt und ausgeführt.
+ * Im Browser wird Inhalt über die Adresse ```localhost:3000``` aufgerufen.
+ * Der ```localhost``` ist der eigene Rechner.
+ * Mit dem Befehl ```ipconfig``` (bei Apple: ifconfig) wird die eigene IP-Adresse angezeigt. Die eigene IP-Adresse ist im Netzwerk eindeutig. 
 
 ## 03.12.2021
 * Schriftart ändern mit CSS
-* HMTL-Grundgerüst erstellen 
-* Button erstellen 
-* Style einfugen über styles.css-Datei
-* Geschweifte Klammer mit ALTGr+7 erstellen 
+* HTML-Grundgerüst erstellen
+* Button erstellen
+* style einfügen über styles.css-Datei
+* Geschweifte Klammer mit ALTGr+7 erstellen
 
-## 07.12.2021
-* Html
-* verschiedene Element in Html recherieren und einbauen 
-* verschiedene Elemete in Html stylen
+ ## 07.12.2021
+ * Schriftfarbe in der styles.css angepasst
+ * styles.css in public-Ordner verschoben
+ 
+ ## 10.12.2021
+ * verschiedene Elemente in HTML recherchieren und einbauen
+ * verschiedene Elemente in HTML stylen
+ * Gute und weniger gute Quellen im Internet erkennen. Gut sind beispielsweise w3schools oder selfhtml
 
 ## 14.12.2021
-* Bild einfügen 
-* Unterschied zwischen PNG und JPG/JPEG verstehen 
-* Alt- Tag beim Bild verstehen 
-* Hyperlink einbauen <a href...></a>
-* Target beim Hyperlink verstehen 
+
+ * Bild einfügen
+ * Unterschied zwischen PNG and JPG/JPEG verstehen
+ * Alt-Tag beim Bild verstehen
+ * Hyperlink einbauen mit <a href...></a>
+ * Target beim Hyperlink verstehen. _blank öffnet im neuen Tab
+
+ ## 14.01.2022 - K2
+ * HTML 
+ * CSS
+
+ 
