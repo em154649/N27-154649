@@ -8,3 +8,7 @@ body {
 div {
     background-color: blue;
  }
+
+ul{ 
+    list-style: square inside url("Icon.gif");
+}
