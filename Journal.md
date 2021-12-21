@@ -51,8 +51,16 @@
  * Hyperlink einbauen mit <a href...></a>
  * Target beim Hyperlink verstehen. _blank öffnet im neuen Tab
 
- ## 14.01.2022 - K2
- * HTML 
- * CSS
+ ## 17.12.2021
+ * Tabelle einfügen 
+ * Zeilen <tr {Tabele-Row}> und Zellen <td {Tabele-data}> in HTML-Tabellen verstehen 
+ * Lisren (geordnet <ol> und ungeordnet <ul>) verstehen 
+
+ ## 21.12.2021
+ * Zeilenbruch  <br> einbauen 
+
+ ## 14.01.2022
+ * Ein läaufiges Projekt 
+ * Teil 1: 
 
  
