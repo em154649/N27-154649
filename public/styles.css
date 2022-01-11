@@ -13,3 +13,10 @@ div {
 ul {
     list-style: square inside url("icon.png");
 }
+
+table {
+    border: 1;
+    border: blue;
+    background-color: rgb(43, 183, 226);
+    
+}
