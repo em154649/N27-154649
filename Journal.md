@@ -63,4 +63,15 @@
  * Ein läaufiges Projekt 
  * Teil 1: 
 
+
+# 21.01.2022
+* login seite erstellen
+* Formular aus w3schools kopiert und eingebaut
+* Type der Inputs entsprechend von Text auf Password bzw. Number geändert 
+* die ID der Inputs setzen 
+* Verlinkung von login nach index und erstellen 
+
+# 25.01.2022
+* Unterschied zwischen POST und GET Vertsehen. GET transpatiert die Dten vom Browser zum Server 
+
  
