@@ -73,5 +73,8 @@
 
 # 25.01.2022
 * Unterschied zwischen POST und GET Vertsehen. GET transpatiert die Dten vom Browser zum Server 
+*
+*
+
 
  
