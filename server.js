@@ -136,3 +136,7 @@ meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {
 
 // require('./Uebungen/ifUndElse.js')
 // require('./Uebungen/klasseUndObjekt.js')
+
+meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => {              
+    serverAntwort.render('profil.ejs', {})          
+})
