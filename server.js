@@ -13,6 +13,7 @@ class Kunde{
         this.Kontostand
         this.Geburtsdatum
         this.Mail
+        this.Rufnummer
     }
 }
 
@@ -28,6 +29,7 @@ kunde.Vorname = "Pit"
 kunde.Geburtsdatum = "23.10.2000"
 kunde.Mail = "mueller@web.de"
 kunde.Kennwort = "123"
+kunde.Rufnummer = "01766687456"
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -139,6 +141,9 @@ meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {
 
 meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => {              
     serverAntwort.render('profil.ejs', {
-        vorname: kunde.Vorname , nachname: kunde.Nachname
+        vorname: kunde.Vorname, 
+        nachname: kunde.Nachname,
+        mail: kunde.mail,
+        Rufnummer: kunde.Rufnummer
     })          
 })
