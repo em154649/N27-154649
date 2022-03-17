@@ -138,5 +138,7 @@ meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {
 // require('./Uebungen/klasseUndObjekt.js')
 
 meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => {              
-    serverAntwort.render('profil.ejs', {})          
+    serverAntwort.render('profil.ejs', {
+        vorname: kunde.Vorname , nachname: kunde.Nachname
+    })          
 })
