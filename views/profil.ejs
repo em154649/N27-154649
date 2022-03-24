@@ -15,17 +15,32 @@
             <h1>N27 - Über uns</h1>            
         </div>
         <div class="navigationsleiste">
-            <a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>  
-            <a href="/about"><i class="fa fa-info fa-2x" aria-hidden="true"></i></a>  
-            <a href="/login"></a><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
-            <a href="/profil"></a><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
-            
+            <a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>  --
+            <a href="/about"><i class="fa fa-info fa-2x" aria-hidden="true"></i></a>  --
+            <a href="/login"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a> --
+            <a href="/profil"><i class="fa fa-user fa-2x" aria-hidden="true"></i>         
         </div>
-        <div class="inhaltsbereich" ></div>
-            <h2> KUNDE</h2>
-            <p> Telefon: 02861 913218-00</p>
-            <p> Lisa E. </p>
-            <p> Email: </p>
+        <div class="inhaltsbereich" >
+            <form method="post">
+                <label for="Vorname">Name:Vorname</label>
+                <input type="text" id="Vorname" name="Vorname" value=<%= vorname %> readonly><br>
+        
+                <label for="Nachname">Nachname:</label>
+                <input type="text" id="Nachname" name="Nachname" value=<%= nachname %> readonly><br><br>
+    
+                <label for="Email">mail:</label>
+                <input type="email" id="mail" name="mail" value=<%= mail %>><br><br>
+        
+                <label for="Rufnummer">Rufnummer:</label>
+                <input type="tel" id="Rufnummer" name="Rufnummer" value=<%= Rufnummer %>><br><br>
+
+                <label for="fname">Kennwort:</label>
+                <input type="password" id="" name="Kennwort" value=<%= Kennwort %>><br><br>
+
+                <button></button>
+        
+    
+            </form>
 
 
         </div>
@@ -34,23 +49,5 @@
             &copy; 2022 GW21
         </div>
     </div>
-    <div class="schreibgeschützt">
-        <form method="post">
-            <label for="Vorname">Name:</label>
-            <input type="text" id="Vorname" name="Vorname" value=<%= vorname %> readonly><br><br>
-    
-            <label for="Nachname">Nachname:</label>
-            <input type="text" id="Nachname" name="Nachname" value=<%= nachname %> readonly><br><br>
-
-            <label for="Email">Name:</label>
-            <input type="email" id="mail" name="mail" value=<%= mail %><br><br>
-    
-            <label for="Rufnummer">Name:</label>
-            <input type="tel" id="Rufnummer" name="Rufnummer" value=<%= Rufnummer %><br><br>
-    
-
-        </form>
-          
-        </div>
 </body>
 </html>

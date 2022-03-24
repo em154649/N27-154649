@@ -21,6 +21,7 @@
 
 .inhaltsbereich{
   min-height: 470px;
+  font-size: 2.5vh;
 }
 
 .fusszeile{
@@ -41,7 +42,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size: 4vh;
+  font-size: 2.5vh;
 }
   
 .login {
@@ -64,7 +65,7 @@ label {
   margin-left: 10%;  
       
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;  
+  font-size: 2.5vh;  
   color:black;
 }
 
@@ -95,7 +96,7 @@ h1 {
   
 h2 {  
   color: #4CAF50;  
-  font-size: 4vw; 
+  font-size: 2.5vh; 
   font-family: Arial, Helvetica, sans-serif;
   text-align:center;
 }
@@ -110,5 +111,5 @@ a {
 p {
   color: rgb(17, 16, 16);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3vw; 
+  font-size: 2vh; 
 }
