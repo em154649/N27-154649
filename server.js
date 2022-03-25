@@ -156,43 +156,17 @@ meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {
     
     // Die im Browser eingegebene Werte werden in Konstante gespeichert
 
-    meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {              
+    meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {              
     
-        // Die im Browser eingegebene IdKunde und Kennwort werden zugewiesen
-        // an die Konstanten namens idKunde und kennwort.
+        // Der Wert der Eigenschaften von Mail im Browser wird
+        // zugewiesen (=) an die Eigenschaft Mail des Objekts kunde 
     
         const kennwort = browserAnfrage.body.Kennwort
-        const mail = browserAnfrage.body.mail
+        const Mail = browserAnfrage.body.mail
         const Rufnummer = browserAnfrage.body.Rufnummer
 
         
-        console.log("ID des Kunden: " + idKunde)
-        console.log("Kennwort des Kunden: " + kennwort)
+        console.log("Profil gespeichert.")    
     
-        // Die Identität des Kunden wird überprüft.
-        
-        if(idKunde == kunde.IdKunde && kennwort == kunde.Kennwort){
-        
-            // Ein Cookie namens 'istAngemeldetAls' wird beim Browser gesetzt.
-            // Der Wert des Cookies ist das in eine Zeichenkette umgewandelte Kunden-Objekt.
-            // Der Cookie wird signiert, also gegen Manpulationen geschützt.
-    
-            serverAntwort.cookie('istAngemeldetAls',JSON.stringify(kunde),{signed:true})
-            console.log("Der Cookie wurde erfolgreich gesetzt.")
-    
-            // Wenn die Id des Kunden mit der Eingabe im Browser übereinstimmt
-            // UND ("&&") das Kennwort ebenfalls übereinstimmt,
-            // dann gibt der Server die gerenderte Index-Seite zurück.
-            
-            serverAntwort.render('index.ejs', {})
-        }else{
-    
-            // Wenn entweder die eingegebene Id oder das Kennwort oder beides
-            // nicht übereinstimmt, wird der Login verweigert. Es wird dann die
-            // gerenderte Login-Seite an den Browser zurückgegeben.
-    
-            serverAntwort.render('login.ejs', {
-                meldung : "Ihre Zugangsdaten scheinen nicht zu stimmen."
-            })
-        }
-    })
+       serverAntwort.render('profil.ejs') })
+    }) 
