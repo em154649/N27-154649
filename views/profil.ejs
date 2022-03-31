@@ -6,47 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    <title>N27 - Über uns</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mein Profil</title>
 </head>
 <body>
     <div class="rahmen">
         <div class="kopf">
-            <h1>N27 - Über uns</h1>            
+            <h1>N27 - Mein Profil</h1>
         </div>
-        <div class="navigationsleiste">
-            <a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>  --
-            <a href="/about"><i class="fa fa-info fa-2x" aria-hidden="true"></i></a>  --
-            <a href="/login"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a> --
-            <a href="/profil"><i class="fa fa-user fa-2x" aria-hidden="true"></i>         
+        <div class="navigationsleiste">            
+            <a href="/">
+                <i class="fa fa-home fa-2x" aria-hidden="true" title="Willkommen"></i>
+            </a> --
+            <a href="/profile">
+                <i class="fa fa-user fa-2x" aria-hidden="true" title="Mein Profil"></i>
+            </a>   --
+            <a href="/about">
+                <i class="fa fa-info fa-2x" aria-hidden="true" title="Über uns"></i>
+            </a>   --
+            <a href="/login">
+                <i class="fa fa-sign-out fa-2x" title="Abmelden"></i>
+            </a>
         </div>
-        <div class="inhaltsbereich" >
+        <div class="inhaltsbereich">
             <form method="post">
-                <label for="Vorname">Name:Vorname</label>
-                <input type="text" id="Vorname" name="Vorname" value=<%= vorname %> readonly><br>
-        
-                <label for="Nachname">Nachname:</label>
-                <input type="text" id="Nachname" name="Nachname" value=<%= nachname %> readonly><br><br>
-    
-                <label for="Email">Mail:</label>
-                <input type="email" id="Mail" name="Mail" value=<%= Mail %>><br><br>
-        
-                <label for="Rufnummer">Rufnummer:</label>
-                <input type="tel" id="Rufnummer" name="Rufnummer" value=<%= Rufnummer %>><br><br>
-
-                <label for="fname">Kennwort:</label>
-                <input type="password" id="" name="Kennwort" value=<%= Kennwort %>><br><br>
-
-                <button class="profil" formaction="/profil">Änderung speichern</button>
-        
-    
-            </form>
-
-
+                <label>Vorname:</label><br>
+                <input type="text" name="Vorname" readonly value=<%= Vorname %>  ><br>
+                <label>Nachname:</label><br>
+                <input type="text" name="Nachname" value=<%= Nachname %> readonly><br>        
+                <label>Mail:</label><br>
+                <input type="email" name="Mail" value=<%= Mail %>  ><br>
+                <label>Kennwort:</label><br>
+                <input type="password" name="Kennwort" value=<%= Kennwort %>  ><br>
+                <label>Rufnummer:</label><br>
+                <input type="tel" name="Rufnummer" value=<%= Rufnummer %>  ><br>
+                <button class="login" formaction="/profil">Änderung speichern</button>
+            </form> 
+            <p class="erfolgsmeldung"><%=Erfolgsmeldung%></p>    
         </div>
-        
         <div class="fusszeile">
-            &copy; 2022 GW21
+            &copy; 2022 GW21A
         </div>
     </div>
 </body>

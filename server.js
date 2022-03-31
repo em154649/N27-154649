@@ -139,13 +139,17 @@ meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {
 // require('./Uebungen/ifUndElse.js')
 // require('./Uebungen/klasseUndObjekt.js')
 
-meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => {              
+meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => { 
+    
+    let erfolgsmeldung=""
+
     serverAntwort.render('profil.ejs', {
-        vorname: kunde.Vorname, 
-        nachname: kunde.Nachname,
-        mail: kunde.mail,
+        Vorname: kunde.Vorname, 
+        Nachname: kunde.Nachname,
+        Mail: kunde.Mail,
         Rufnummer: kunde.Rufnummer,
-        Kennwort: kunde.Kennwort
+        Kennwort: kunde.Kennwort,
+        Erfolgsmeldung: erfolgsmeldung
     })          
 })
 
@@ -153,13 +157,46 @@ meineApp.get('/profil',(browserAnfrage, serverAntwort, next) => {
 // wird die meineApp.post(`profil´...) abgearbeitet 
 
 meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {              
-    
-    // Die im Browser eingegebene Werte werden in Konstante gespeichert
+     
+    let erfolgsmeldung=""
 
-    meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {              
-    
         // Der Wert der Eigenschaften von Mail im Browser wird
         // zugewiesen (=) an die Eigenschaft Mail des Objekts kunde 
+
+        if(kunde.Mail != browserAnfrage.body.Mail){
+
+            // Wenn der Wet Ein
+
+
+            erfolgsmeldung = erfolgsmeldung + "Änderung der Mail erfolgreich"
+            kunde.Mail = browserAnfrage.body.Mail
+            console.log(erfolgsmeldung)
+    
+        }
+
+        if(kunde.Kennwort != browserAnfrage.body.Mail){
+
+            // Wenn der Wet Ein
+
+
+            erfolgsmeldung = erfolgsmeldung + "Änderung des Kennworts erfolgreich"
+            kunde.Kennwort = browserAnfrage.body.Kennwort
+            console.log(erfolgsmeldung)
+    
+
+        }
+
+        if(kunde.Rufnummer != browserAnfrage.body.Rufnummer){
+
+            // Wenn der Wet Ein
+
+
+            erfolgsmeldung = erfolgsmeldung + "Änderung der Rufnummer erfolgreich"
+            kunde.Rufnummer = browserAnfrage.body.Rufnummer
+            console.log(erfolgsmeldung)
+    
+
+        }
     
         const kennwort = browserAnfrage.body.Kennwort
         const Mail = browserAnfrage.body.mail
@@ -168,5 +205,13 @@ meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {
         
         console.log("Profil gespeichert.")    
     
-       serverAntwort.render('profil.ejs') })
-    }) 
+        serverAntwort.render('profil.ejs', {
+            Vorname: kunde.Vorname, 
+            Nachname: kunde.Nachname,
+            Mail: kunde.Mail,
+            Rufnummer: kunde.Rufnummer,
+            Kennwort: kunde.Kennwort,
+            Erfolgsmeldung: erfolgsmeldung
+        })     
+    })
+    
