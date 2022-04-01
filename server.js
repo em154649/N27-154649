@@ -129,11 +129,19 @@ meineApp.get('/login',(browserAnfrage, serverAntwort, next) => {
     })          
 })
 
-// Die meineApp.post('login') wird ausgeführt, sobald der Button
-// auf dem Login-Formular gedrückt wird.
+// Wenn die about-Seite angesurft wird, wird die about-Seite 
+// Zum Browser zurückgegeben 
 
-meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {              
-    serverAntwort.render('about.ejs', {})          
+meineApp.get('/about',(browserAnfrage, serverAntwort, next) => { 
+    
+    // Wenn der Anmelde-Cookie gesetzt ist, wird der Nutzer zur
+    // About-Seite gelenkt.
+        if(browserAnfrage.signedCookies['istAngemeldetAls']){
+
+        serverAntwort.render('index.ejs',{})
+    }else{
+
+    }                       
 })
 
 // require('./Uebungen/ifUndElse.js')
