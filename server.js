@@ -31,6 +31,28 @@ kunde.Mail = "mueller@web.de"
 kunde.Kennwort = "123"
 kunde.Rufnummer = "01766687456"
 
+class Kundenberater{
+    constructor(){
+        this.Nachname
+        this.Vorname
+        this.Mail
+        this.Rufnummer
+        this.IdKundenberater
+        this.Berguesseung
+
+
+    }
+}
+
+let kundenberater=new Kundenberater()
+
+kundenberater.Nachname = "Fischer"
+kundenberater.Vorname = "Hans"
+kundenberater.Mail = "hans@web.de"
+kundenberater.Rufnummer = "0173336980"
+kundenberater.IdKundenberater = ""
+kundenberater.Berguesseung = ""
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const meineApp = express()
@@ -132,17 +154,26 @@ meineApp.get('/login',(browserAnfrage, serverAntwort, next) => {
 // Wenn die about-Seite angesurft wird, wird die about-Seite 
 // Zum Browser zurückgegeben 
 
-meineApp.get('/about',(browserAnfrage, serverAntwort, next) => { 
-    
+meineApp.get('/about',(browserAnfrage, serverAntwort, next) => {              
+
     // Wenn der Anmelde-Cookie gesetzt ist, wird der Nutzer zur
     // About-Seite gelenkt.
-        if(browserAnfrage.signedCookies['istAngemeldetAls']){
 
-        serverAntwort.render('index.ejs',{})
+    if(browserAnfrage.signedCookies['istAngemeldetAls']){
+        
+        // Die About-Seite wird an den Browser gegeben:
+
+        serverAntwort.render('about.ejs',{})
     }else{
 
-    }                       
+        // Wenn der Kunde noch nicht eigeloggt ist, soll
+        // die Loginseite an den Browser zurückgegeben werden.
+        serverAntwort.render('login.ejs', {
+            Meldung: ""
+        })
+    }         
 })
+
 
 // require('./Uebungen/ifUndElse.js')
 // require('./Uebungen/klasseUndObjekt.js')
@@ -222,4 +253,26 @@ meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {
             Erfolgsmeldung: erfolgsmeldung
         })     
     })
+    
+    meineApp.get('/support',(browserAnfrage, serverAntwort, next) => {  
+    
+        if(browserAnfrage.signedCookies['istAngemeldetAls']){
+            
+    
+            serverAntwort.render('support.ejs',{
+                Vorname: kundenberater.Vorname, 
+                Nachname: kundenberater.Nachname,
+                Mail: kundenberater.Mail,
+                Rufnummer: kundenberater.Rufnummer,
+            })
+        }else{
+    
+            // Wenn der Kunde noch nicht eigeloggt ist, soll
+            // die Loginseite an den Browser zurückgegeben werden.
+            serverAntwort.render('login.ejs', {
+                Meldung: ""
+            })
+        }         
+    })
+
     
