@@ -10,7 +10,6 @@ class Kunde{
         this.Nachname
         this.Vorname
         this.Kennwort
-        this.Kontostand
         this.Geburtsdatum
         this.Mail
         this.Rufnummer
@@ -38,7 +37,7 @@ class Kundenberater{
         this.Mail
         this.Rufnummer
         this.IdKundenberater
-        this.Berguesseung
+        this.Begruesseung
 
 
     }
@@ -50,8 +49,26 @@ kundenberater.Nachname = "Fischer"
 kundenberater.Vorname = "Hans"
 kundenberater.Mail = "hans@web.de"
 kundenberater.Rufnummer = "0173336980"
-kundenberater.IdKundenberater = ""
-kundenberater.Berguesseung = ""
+kundenberater.IdKundenberater = "150000"
+kundenberater.Begruesseung = "Hallo, ich bin`s ihr Kundenberater"
+
+class Konto{
+    constructor(){
+        this.Kontostand
+        this.IBAN
+        this.Pin
+        this.Kontoart
+         }
+          }
+
+let konto = new Konto()
+
+konto.Kontostand = 10000
+konto.IBAN = "DE12345608767"
+konto.Pin = 123
+konto.Kontoart = "Giro"
+
+
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -264,6 +281,7 @@ meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {
                 Nachname: kundenberater.Nachname,
                 Mail: kundenberater.Mail,
                 Rufnummer: kundenberater.Rufnummer,
+                Begruesseung: kundenberater.Begruesseung
             })
         }else{
     
@@ -275,4 +293,28 @@ meineApp.post('/profil',(browserAnfrage, serverAntwort, next) => {
         }         
     })
 
+
+    meineApp.get('/kontostandAnzeigen',(browserAnfrage, serverAntwort, next) => {              
+
+        // Wenn der Anmelde-Cookie gesetzt ist, wird der Nutzer zur
+        // About-Seite gelenkt.
     
+        if(browserAnfrage.signedCookies['istAngemeldetAls']){
+            
+            // Die About-Seite wird an den Browser gegeben:
+    
+            serverAntwort.render('kontostandAnzeigen.ejs',{})
+        }else{
+    
+            // Wenn der Kunde noch nicht eigeloggt ist, soll
+            // die Loginseite an den Browser zurückgegeben werden.
+            serverAntwort.render('login.ejs', {
+                Meldung: ""
+            })
+        }         
+    })
+   
+
+
+    
+
